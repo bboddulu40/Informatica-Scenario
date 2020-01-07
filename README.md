@@ -1,4 +1,4 @@
-# Informatica-Scenario
+# Informatica
 ## SEP19 
 ## SCD Type 1 
 ## OCT19
