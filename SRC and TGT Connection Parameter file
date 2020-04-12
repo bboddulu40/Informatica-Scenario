@@ -1,0 +1,23 @@
+##Below are parameterized connections for Source and Target connections.
+
+
+
+[Global]
+
+$PMInfaSharedDir=\\MyComputer\infa_shared
+$PMInputFileDir =\\MyComputer\infa_shared\Infa_Cloud\SF\InputFiles
+$PMLookupFileDir = \\MyComputer\infa_shared\Infa_Cloud\SF\LookupFiles\
+$PMOutputFileDir = \\MyComputer\infa_shared\Infa_Cloud\SF\OutputFiles\
+
+
+##Created connection parameter "Conn_lkp" for Flatfile connection ff_Lookup for lookup Files folder.
+
+$Conn_lkp=ff_Lookup
+
+##Created connection parameter "Conn_FF" for Flat file connection ff_Input
+
+$Conn_FF_Inbound=ff_Input
+
+##Created connection parameter "conn_SF" for salesforce connection sf_US.
+
+$conn_SF=sf_US
