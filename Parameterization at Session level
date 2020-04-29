@@ -1,0 +1,32 @@
+[Global]
+
+$PMInfaSharedDir=\\MyComputer\infa_shared
+$PMInputFileDir =\\MyComputer\infa_shared\Infa_Cloud\SF\InputFiles
+$PMLookupFileDir = \\MyComputer\infa_shared\Infa_Cloud\SF\LookupFiles\
+$PMOutputFileDir = \\MyComputer\infa_shared\Infa_Cloud\SF\OutputFiles\
+
+
+##Created connection parameter "Conn_lkp" for Flatfile connection ff_Lookup for lookup Files folder.
+
+$Conn_lkp=ff_Lookup
+
+##Created connection parameter "Conn_FF" for Flat file connection ff_Input
+
+$Conn_FF_Inbound=ff_Input
+
+##Created connection parameter "conn_SF" for salesforce connection sf_US.
+
+$conn_SF=sf_US
+
+## Parameter for Archiving source Files.
+
+$Param_Archive=python $PMInfaSharedDir\Scripts\archive_file.py $PMInputFileDir\Table2Association.csv
+
+## Parameter for Checking source Files.
+
+$Param_wf_File_Check=IF NOT EXIST "$PMInputFileDir\Table2Association.csv" copy $PMSourceFileDirTable2Association.csv $PMInputFileDir\Table2Association.csv
+
+## Parameter for Archiving Error Files.
+
+$Param_Error_Archive=python $PMInfaSharedDir\Scripts\archive_file.py $PMErrorFileDir\Table2Association_Error.csv
+
